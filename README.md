@@ -1,35 +1,29 @@
 # Web Engineering 2015-2016 / Microservices
 Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab6-microservices/wiki) in order to get the instructions for this assignment.
 
-NIA    | User name | Repo | Improvement | Score
--------|-----------|------|-------------|--------
-647002 | AGUILAR REQUENA, EDUARDO 
-666156 | BAREA LÓPEZ, DANIEL 
-666179 | BARRIOS GIL, ÁLVARO 
-612595 | BELTRÁN PIÑOL, VÍCTOR 
-683326 | BINTANED BASA, JESÚS 
-649003 | CAUDEVILLA CASAUS, JOSE ÁNGEL
-750846 | DAVID MOLINA, JOHN ALEXIS 
-529361 | DUMITRACHE , CATALIN  CONSTANTIN 
-535621 | FRÍAS ZAPATER, MARTA ALMUDENA
-680669 | GUIU PÉREZ, ALEJANDRO 
-682531 | JUAN CIRIACO, ÁLVARO 
-544393 | LAHOZ EGEA, CRISTINA 
-622612 | MARTIN SEGURA, SERGIO  
-681061 | MARTÍNEZ MENÉNDEZ, ALBERTO 
-576307 | MARTÍNEZ PÉREZ, ADRIAN 
-540891 | MENENDEZ MOYA, FRANCISCO 
-680882 | MORENO JIMENO, RUBÉN 
-750849 | MOSQUERA ZAPATA, LUIS EDUARDO 
-650448 | MURILLO MAGDALENA, JAVIER 
-453948 | NAVARRO CLARAS, MARIO 
-647973 | PERALTA MARTÍNEZ, SANTIAGO 
-683546 | PÉREZ CANCER, BEATRIZ 
-686329 | ROIG JIMENEZ, ANA
-559207 | RUEDA MACÍAS, DANIEL 
-610344 | SALUEÑA SEDILES, ASIER 
-680182 | SANZ ALCAINE, JORGE 
-534521 | SANZ VIDAL, AITOR 
-618051 | TOLON MARTÍN, CARLOS JAVIER 
-643821 | VELA GARCÍA, JUAN 
-679609 | VIÑUALES SÁNCHEZ, PABLO 
+#### The two microservices are running and registered:
+
+* Accounts Service running
+
+![Accounts Service running](images/2.png "Accounts Service running")
+
+* Web Service running
+
+![Web Service running](images/1.png "Web Service running")
+
+#### The service registration service has the two microservices registered:
+
+![Microservices registered](images/4.png "Microservices registered")
+
+![Microservices registered](images/3.png "Microservices registered")
+
+#### A second account microservice is running in the port 4444 and it is registered:
+
+![Second Accounts Service registered](images/6.png "Second Accounts Service registered")
+
+![Second Accounts Service registered](images/5.png "Second Accounts Service registered")
+
+#### A brief report describing what happens when you kill the microservice with port 2222. Can the web service provide information about the accounts? Why?
+
+The first time when you try to find the information about accounts after kill the microservice in port 2222, the Web Service returns an error because the connection has been refused.
+For that reason, the Web Service tries to discover where is Accounts Service asking to Eureka Server, so it provides the new port.  
